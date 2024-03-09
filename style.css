@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.cake {
+  width: 200px;
+  height: 200px;
+  background-color:peru;
+  border-radius: 50%;
+  margin: 50px auto;
+  animation: cake-appear 2s ease-in-out;
+}
+
+.frosting {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 40%;
+  background-color: lightyellow;
+  border-radius: 50%;
+}
+
+.candle {
+  position: absolute;
+  top: 20px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 70px;
+  background-color: orange;
+  border-radius: 5px;
+  animation: candle-flicker 1.5s infinite alternate ease-in-out;
+}
+
+.sprinkle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: sprinkle-dance 2s ease-in-out infinite;
+}
+
+.sprinkle.red {
+  background-color: red;
+}
+
+.sprinkle.blue {
+  background-color: blue;
+}
+
+.sprinkle.yellow {
+  background-color: yellow;
+}
+
+.firework {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: firework-burst 3s ease-in-out forwards;
+}
+
+.happy-birthday {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: hotpink;
+  opacity: 0;
+  animation: birthday-text 1s ease-in-out forwards;
+}
+
+@keyframes cake-appear {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes candle-flicker {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes firework-burst {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes birthday-text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sprinkle-dance {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(30px) rotate(360deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(720deg);
+  }
+}
